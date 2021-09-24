@@ -1,7 +1,7 @@
 # js13kGames 2021 Template
 Hi! 
 
-This template is somewhat a re-organized, updated, cleaner version of what I used to create [PACKABUNCHAS](https://js13kgames.com/entries/packabunchas),my entry for [js13kGames](https://js13kgames.com)2021. 
+This template is somewhat a re-organized, updated, cleaner version of what I used to create [PACKABUNCHAS](https://js13kgames.com/entries/packabunchas),my entry for [js13kGames](https://js13kgames.com) 2021. 
 It includes some features that I personally see as "standards" in the field of making games in 13kb and that I'd like to re-use in future games :)
 
 It is a single chunk divided in different sections that you can use as snippets in your own project.
