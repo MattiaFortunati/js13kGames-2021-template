@@ -1,0 +1,59 @@
+<!--
+	The following code is needed to show emojis in some environments.
+//-->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>GAME TITLE</title>
+<!--
+	EMOJI AS FAVICON
+
+	As suggested within the many golfing tips xem  shares on Twitter
+	https://twitter.com/maximeeuziere
+	I've followed this tutorial:
+	https://css-tricks.com/emojis-as-favicons/
+
+	If you have time and bytes obviously the best choice is to use SVG as favicon, but this solution is simple and effective and it will even use the emoji as icon in case you use the "add to home screen" feature on mobile devices!
+	Very clean!
+//-->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+<!--
+	CANVAS CENTERING AND RESIZING
+
+	After experimenting with different solutions found around the web from older js13k entries and random websites, 
+	I've choosen this one as my very favourite.
+	It's about div wrapping and it's smart, readable and it works pretty well in all the devices I've tested it.
+
+	As you can see it is setup for portrait orientation, but you can easily play around with it to set it up for landscape or any aspect ration you want.
+	No secrets, I've taken it directly from stackoverflow :)
+	https://stackoverflow.com/questions/67758479/how-to-fit-html-canvas-to-screen-while-maintaining-aspect-ratio-and-not-cutting 
+	
+	touch-action: none
+	is needed to prevent scrolling, double taps and such on mobile devices.
+
+	This will definitely be a new centering and resizing standard for my projects! 
+//-->
+
+<div class="c">
+	<canvas id=v width=1080 height=1920></canvas>
+	</div>
+		<style>
+		.c {
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #FFEA7E;
+			touch-action: none;
+		}
+		
+		.c canvas {
+			object-fit: contain;
+			max-height: 100%;
+			max-width: 100%;
+			touch-action: none;
+		}
+		</style>
+		<script src="game.js"></script>
